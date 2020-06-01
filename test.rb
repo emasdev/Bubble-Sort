@@ -1,9 +1,9 @@
 def hello
-  puts "begining"
+  puts 'begining'
   yield
-  puts "end"
+  puts 'end'
 end
 
-hello do 
-  puts "This is gonna trigger yield"
+hello do
+  puts 'This is gonna trigger yield'
 end
