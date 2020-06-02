@@ -46,8 +46,7 @@ def bubble_sort_by(arr)
   return arr
 end
 
-# array = [4,3,78,2,0,2]
-puts 'Result 1:'
+puts 'Result Numbers sorting:'
 array = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 1, 1, 0, 0]
 print bubble_sort(array)
 puts ' '
