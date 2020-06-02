@@ -43,7 +43,7 @@ def bubble_sort_by(arr)
       index += 1
     end
   end
-  return arr
+  arr
 end
 
 puts 'Result Numbers sorting:'
