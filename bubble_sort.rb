@@ -1,9 +1,9 @@
 def bubble_sort(arr)
-  limit = arr.length
+  limit = arr.length.to_i - 2
   index = 0
   finish_sorting, need_to_sort = false
   until finish_sorting
-    if (arr[index + 1]) && (arr[index] > arr[index + 1])
+    if arr[index] > arr[index + 1]
       arr[index], arr[index + 1] = arr[index + 1], arr[index]
       need_to_sort = true
     end
@@ -23,11 +23,11 @@ def bubble_sort(arr)
 end
 
 def bubble_sort_by(arr)
-  limit = arr.length
+  limit = arr.length.to_i - 2
   index = 0
   finish_sorting, need_to_sort = false
   until finish_sorting
-    if (arr[index + 1]) && (yield arr[index], arr[index + 1]).to_i.positive?
+    if (yield arr[index], arr[index + 1]).to_i.positive?
       arr[index], arr[index + 1] = arr[index + 1], arr[index]
       need_to_sort = true
     end
