@@ -64,6 +64,6 @@ array = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 1, 1, 0, 0]
 bubble_sort(array)
 puts ' '
 puts 'result 2:'
-bubble_sort_by(%w[hi hello hey]) do |left, right|
+bubble_sort_by(%w[worldwide hi hello hey i]) do |left, right|
   left.length - right.length
 end
