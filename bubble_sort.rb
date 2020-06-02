@@ -19,7 +19,7 @@ def bubble_sort(arr)
       index += 1
     end
   end
-  print arr
+  arr
 end
 
 def bubble_sort_by(arr)
@@ -43,15 +43,13 @@ def bubble_sort_by(arr)
       index += 1
     end
   end
-  print arr
+  return arr
 end
 
 # array = [4,3,78,2,0,2]
 puts 'Result 1:'
 array = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 1, 1, 0, 0]
-bubble_sort(array)
+print bubble_sort(array)
 puts ' '
 puts 'result 2:'
-bubble_sort_by(%w[worldwide hi hello hey i]) do |left, right|
-  left.length - right.length
-end
+print bubble_sort_by(%w[worldwide hi hello hey i]) { |left, right| left.length - right.length }
