@@ -46,12 +46,11 @@ def bubble_sort_by(arr)
   print arr
 end
 
-# array = [4,3,78,2,0,2]
-puts 'Result 1:'
+puts 'Result Numbers sorting:'
 array = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 1, 1, 0, 0]
 bubble_sort(array)
 puts ' '
-puts 'result 2:'
+puts 'Result Text sorting:'
 bubble_sort_by(%w[worldwide hi hello hey i]) do |left, right|
   left.length - right.length
 end
