@@ -1,17 +1,11 @@
 def bubble_sort(arr)
   limit = arr.length
   index = 0
-  finish_sorting = false
-  need_to_sort = false
+  finish_sorting, need_to_sort = false
   until finish_sorting
-    number = arr[index]
-    nextNumber = arr[index + 1]
-    if nextNumber && number
-      if number > nextNumber
-        arr[index] = nextNumber
-        arr[index + 1] = number
-        need_to_sort = true
-      end
+    if (arr[index + 1]) && (arr[index] > arr[index + 1])
+      arr[index], arr[index + 1] = arr[index + 1], arr[index]
+      need_to_sort = true
     end
 
     if index == limit
@@ -31,17 +25,11 @@ end
 def bubble_sort_by(arr)
   limit = arr.length
   index = 0
-  finish_sorting = false
-  need_to_sort = false
+  finish_sorting, need_to_sort = false
   until finish_sorting
-    number = arr[index]
-    nextNumber = arr[index + 1]
-    if nextNumber && number
-      if (yield number, nextNumber).to_i >= 0
-        arr[index] = nextNumber
-        arr[index + 1] = number
-        need_to_sort = true
-      end
+    if (arr[index + 1]) && (yield arr[index], arr[index + 1]).to_i.positive?
+      arr[index], arr[index + 1] = arr[index + 1], arr[index]
+      need_to_sort = true
     end
 
     if index == limit
